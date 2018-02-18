@@ -1,0 +1,27 @@
+.overlay {
+	/* #region Фиксированное позиционирование */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* #endregion */
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 9998;
+}
+
+.#{$modal-name} {
+	@include element('content') {
+		/* #region Абсолютное позиционирование */
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		right: 40px;
+		bottom: 40px;
+		/* #endregion */
+		background-color: #fff;
+		border: 1px solid #000;
+		overflow: auto;
+		padding: 20px;
+	}
+}
